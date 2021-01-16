@@ -1,0 +1,23 @@
+{% extends 'sa/base.html' %}
+{% block title %} Registration{% endblock %}
+{% block content %}
+{% load static %}
+	<div class=" col-md-5 mx-auto mt-3 mb-3">
+		<div class="card-body mx-1">
+			<h2 style="font-family:Californian FB" class=" text-center my-2">Registration Form</h2>
+			<form method="POST">
+				{% csrf_token %}
+				<table class="table table-borderless">
+					{% for i in t %}
+					<tr>
+						<td>{{i}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<input type="submit" class="form-control text-white btn btn-info" name="Submit" value="Submit">	
+			</form>	
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}

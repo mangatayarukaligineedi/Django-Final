@@ -1,0 +1,63 @@
+{% extends 'sa/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content%}
+{% load static %}
+<div class="container-fluid mt-4 mb-4">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" style="box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);">
+    <div class="carousel-item active">
+      <img src="{% static 'images/mp.jpg' %}" class="d-block w-20 shadow-lg" style="width:1500px;height:350px" alt="logo">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/mp1.jpg' %}" class="d-block w-20 shadow-lg" style="width:1500px;height:350px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/mp2.jpg' %}" class="d-block w-20 shadow-lg" style="width:1500px;height:350px"  alt="...">
+    </div>
+  </div>
+</div>
+</div>
+<body style="overflow-x: hidden";>
+  <div class="container-fluid bg-dark mt-5" style="font-size:15px" >
+      <div class="container p-0">
+        <div class=" container-fluid row text-left">
+          <div class="col-md-5 col-d-5">
+            <h1 class="text-light">About us</h1>
+            <div class="text-muted">
+            <p style="color: white">Seminar rooms are used for staff training and staff information delivery. Seminar rooms are sometimes also used as 'rooms for hire' to suitable third parties and will typically need appropriate fixtures and access to amenities. The space may also be used as a general student teaching space.</p>
+          </div>
+          <div class="pt-4 text-muted">
+</div>
+</div>
+<div class="col-md-2  col-sm-12" style="margin-left: 25%">
+  <div class="text-light" >
+  <h2>Follow us</h2>
+</div>
+  <div class="text-muted">
+  <p>let us be social</p>
+</div>
+  <div class="column">
+
+            <span class="fa fa-facebook text-white" aria-hidden="true"></span>
+            <i class="fa fa-google text-white" aria-hidden="true"></i>
+            <i class="fa fa-twitter text-white" aria-hidden="true"></i>
+            <i class="fa fa-instagram text-white" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play text-white" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp text-white" aria-hidden="true"></i>
+
+
+
+
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

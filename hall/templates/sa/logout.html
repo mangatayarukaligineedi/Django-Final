@@ -1,0 +1,12 @@
+{% extends 'sa/base.html' %}
+{% block title %} Logout {% endblock %}
+{% block content %}
+<div class="container">
+	<body style="background-color: powderblue"></body>
+	<div class="card col-md-6 mx-auto mt-5 shadow-lg">
+		<h2 class="bg-primary text-white text-center border rounded mt-2 p-2 "> Logout</h2>
+		<p class="text-center"> Are you sure you want log out ?<br/><br/>
+		<a href="{% url 'lgn' %}" class="btn btn-info border rounded mx-1 ">Yes</a><a href="{% url 'lgn' %}" class=" btn btn-info border rounded mx-1">No</a></p>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'sa/base.html' %}
+{% block title %} Booking Details {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-7 mt-2 mx-auto">
+		<h2 class="bg-warning text-white text-center mx-2 my-2 p-2">Enter details</h2>
+		<div class="card-body">
+			<form method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" name="Book" class="btn btn-block btn-success">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'sa/base.html' %}
+{% block title %}Halls List{% endblock %}
+{% block content %}
+<div class="container col-md-9 mt-4">
+	<div class="jumbotron border rounded">
+		<h2 class="p-3 text-white text-center bg-secondary border rounded mx-1 my-2">Available Halls List</h2>
+		<div>
+			{% for i in halls %}
+			<div class='row mt-4'>
+				<div class='col-md-6'>
+					{{forloop.counter}} .
+					<img src="{{i.image.url}}" width="80%" height = "80%"style="border-radius:20%">
+				</div>
+				<div class='col-md-6'>
+					<b>Hall Number : {{i.number}}<b><br>
+					<b>Hall Type : {{i.hall_type}}</b><br>
+					<b>Capacity : {{i.capacity}}</b><br>
+					<b>Cost : {{i.cost}}</b><br><br><br>
+					<button class="btn btn-info border rounded"><a  class="text-white" href="{% url 'book_hall' i.number %}">Book</a></button>
+				</div>
+			</div>
+			<hr>
+			{% endfor %}
+		</div>
+		<!-- <table border="1" width="100%" class="table table-bordered table-hover col-md-12 mx-12">
+			<tr class="bg-dark text-white border rounded">
+				<th>S.no</th>
+				<th>Hall Number</th>
+				<th>Hall Type</th>
+				<th>Hall Image</th>
+				<th>Capacity</th>
+				<th>Cost</th>
+				<th>Action</th>
+			</tr>
+			{% for i in halls %}
+			<tr>
+				<b>{{forloop.counter}}</b>
+				<b>{{i.number}}</b>
+				<b>{{i.hall_type}}</b>
+				<b><center><img src="{{i.image.url}}" width="40%" class="rounded"></center></b>
+				<b>{{i.capacity}}</b>
+				<b>{{i.cost}}</b>
+				<b>
+					<button class="btn btn-info border rounded"><a  class="text-white" href="{% url 'book_hall' i.number %}">Book</a></button>
+				</b>
+			</tr>
+			{% endfor %}
+		</table> -->
+	</div>
+</div>
+{% endblock %}
